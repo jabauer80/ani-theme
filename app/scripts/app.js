@@ -7,10 +7,9 @@
 		"firebase",
 
 		"app.core",
-		"app.authentication"
-		//"app.landing",
-		//"app.dashboard",
-		//"app.roadmap"
+		"app.authentication",
+		"app.dashboard",
+		"app.roadmap"
 
 	]).config(function ($stateProvider, $urlRouterProvider) {
 
@@ -26,27 +25,36 @@
 			.state('login', {
 				url: '/login',
 				parent: 'base',
-				templateUrl: 'views/login.html',
+				templateUrl: 'scripts/authentication/views/login.html',
 				controller: 'AuthenticationController',
-				controllerAs:"vm"
+				controllerAs: "vm"
 			})
 			.state('dashboard', {
 				url: '/dashboard',
 				parent: 'base',
-				templateUrl: 'views/dashboard.html',
-				controller: 'DashboardCtrl'
+				templateUrl: 'scripts/dashboard/views/dashboard.html',
+				controller: 'DashboardController'
 			})
 			.state('overview', {
 				url: '/overview',
 				parent: 'dashboard',
-				templateUrl: 'views/dashboard/overview.html'
+				templateUrl: 'scripts/overview/views/overview.html',
+				controller: 'AuthenticationController',
+				controllerAs: "vm"
 			})
 			.state('reports', {
 				url: '/reports',
+				parent: 'dashboard'
+
+			})
+			.state('roadmaps', {
+				url: '/roadmaps',
 				parent: 'dashboard',
-				templateUrl: 'views/dashboard/reports.html'
+				templateUrl: 'scripts/roadmap/views/roadmaps.html',
+				controller: 'RoadmapController',
+				controllerAs: "vm"
 			});
-	})
+	});
 })();
 
 

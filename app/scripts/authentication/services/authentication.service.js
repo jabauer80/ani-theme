@@ -36,6 +36,7 @@
 
 		function logout() {
 			//roadmapService.reset();
+			console.log("Logged out...");
 			return firebaseAuthObject.$unauth();
 		}
 

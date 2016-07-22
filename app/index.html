@@ -55,16 +55,25 @@
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="scripts/app.js"></script>
 
+<!-- core module -->
 <script src="scripts/core/core.module.js"></script>
 <script src="scripts/core/constants.js"></script>
-<script src="scripts/core/firebaseData.service.js"></script>
+<script src="scripts/core/services/firebaseData.service.js"></script>
 
+<!-- authentication module -->
 <script src="scripts/authentication/authentication.module.js"></script>
-<script src="scripts/authentication/authentication.service.js"></script>
-<script src="scripts/authentication/authentication.controller.js"></script>
+<script src="scripts/authentication/services/authentication.service.js"></script>
+<script src="scripts/authentication/controllers/authentication.controller.js"></script>
 
-<script src="scripts/controllers/login.js"></script>
-<script src="scripts/controllers/dashboard.js"></script>
+<!-- dashboard module -->
+<script src="scripts/dashboard/dashboard.module.js"></script>
+<script src="scripts/dashboard/controllers/dashboard.controller.js"></script>
+
+<!-- roadmap modules -->
+<script src ="scripts/roadmap/roadmap.module.js"></script>
+<script src ="scripts/roadmap/services/roadmap.service.js"></script>
+<script src ="scripts/roadmap/controllers/roadmap.controller.js"></script>
+
 <!-- endbuild -->
 
 <!-- firebase components -->
